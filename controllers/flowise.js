@@ -9,12 +9,12 @@ export const createPrediction = async (req, res) => {
     };
 
     const response = await fetch(
-      `${process.env.FLOWISE_URL}/api/v1/prediction/${process.env.FLOW_ID}`, // バックティックとカンマを追加
+      `https://flowise-s3z3.onrender.com/api/v1/prediction/71ff7ad7-e3e8-43d6-ae13-703ffe863488`, // バックティックとカンマを追加
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.FLOWISE_API_KEY}` // バックティックを使用
+          Authorization: `Bearer kg2F4Klp254pbNoH52EmQz1Sd3vSnkGvqUV7FgdhprY=` // バックティックを使用
         },
         body: JSON.stringify(flowiseData),
       }
